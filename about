@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกี่ยวกับเรา | Modern News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(45deg, #0ea5e9, #3b82f6);
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-100 py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center">
+                        <i class="fas fa-newspaper text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">ModernNews</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="font-medium text-gray-700 hover:text-blue-600 transition-colors">หน้าหลัก</a>
+                    <a href="news.html" class="font-medium text-gray-700 hover:text-blue-600 transition-colors">ข่าวเด่น</a>
+                    <a href="categories.html" class="font-medium text-gray-700 hover:text-blue-600 transition-colors">หมวดหมู่</a>
+                    <a href="about.html" class="font-medium text-blue-600">เกี่ยวกับ</a>
+                    <a href="contact.html" class="font-medium text-gray-700 hover:text-blue-600 transition-colors">ติดต่อ</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 rounded-full hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-search text-gray-600"></i>
+                    </button>
+                    <button class="md:hidden p-2 rounded-full hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-bars text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-20 bg-gradient-to-r from-blue-50 to-blue-100">
+        <div class="container mx-auto px-5 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">เกี่ยวกับ <span class="gradient-text">ModernNews</span></h1>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">เราเป็นแหล่งข่าวสารที่ทันสมัย มุ่งนำเสนอข้อมูลที่ถูกต้อง รวดเร็ว และเป็นกลาง เพื่อตอบสนองความต้องการของผู้อ่านในยุคดิจิทัล</p>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="py-16">
+        <div class="container mx-auto px-5">
+            <div class="max-w-4xl mx-auto">
+                <div class="flex flex-col md:flex-row gap-12 items-center mb-16">
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                             alt="เกี่ยวกับเรา" class="rounded-xl shadow-lg w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-6">ความเป็นมา</h2>
+                        <p class="text-gray-600 mb-4">ModernNews ก่อตั้งขึ้นในปี 2018 ด้วยวิสัยทัศน์ที่จะเปลี่ยนแปลงการบริโภคข่าวสารของคนไทย เราตั้งใจสร้างแพลตฟอร์มข่าวที่ทันสมัย อ่านง่าย และเข้าถึงได้ทุกที่ทุกเวลา</p>
+                        <p class="text-gray-600">ตลอดหลายปีที่ผ่านมา เราเติบโตขึ้นอย่างต่อเนื่อง และได้รับความไว้วางใจจากผู้อ่านมากกว่า 1 ล้านคนต่อเดือน</p>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col md:flex-row-reverse gap-12 items-center mb-16">
+                    <div class="md:w-1/2">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="พันธกิจ" class="rounded-xl shadow-lg w-full">
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-3xl font-bold mb-6">พันธกิจ</h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-check text-blue-600"></i>
+                                </div>
+                                <span class="text-gray-600">นำเสนอข่าวสารที่ถูกต้อง รวดเร็ว และเป็นกลาง</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-check text-blue-600"></i>
+                                </div>
+                                <span class="text-gray-600">พัฒนาประสบการณ์การอ่านข่าวให้ดีขึ้นอย่างต่อเนื่อง</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-check text-blue-600"></i>
+                                </div>
+                                <span class="text-gray-600">ส่งเสริมการรู้เท่าทันสื่อและข้อมูลในสังคมดิจิทัล</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-check text-blue-600"></i>
+                                </div>
+                                <span class="text-gray-600">เป็นสื่อที่รับผิดชอบต่อสังคมและสิ่งแวดล้อม</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold mb-12 text-center">ทีมงานของเรา</h2>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-xl p-6 text-center team-card transition-all duration-300 shadow-sm hover:shadow-md border border-gray-100">
+                    <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-md">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="ทีมงาน" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">สุณีรัตน์ วัฒนกิจ</h3>
+                    <p class="text-blue-600 font-medium mb-3">บรรณาธิการบริหาร</p>
+                    <p class="text-gray-600 text-sm">ผู้กำหนดทิศทางและนโยบายข่าวสารขององค์กร</p>
+                    <div class="flex justify-center space-x-3 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-500">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-xl p-6 text-center team-card transition-all duration-300 shadow-sm hover:shadow-md border border-gray-100">
+                    <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-md">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="ทีมงาน" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">ธนวัฒน์ สุขสวัสดิ์</h3>
+                    <p class="text-blue-600 font-medium mb-3">หัวหน้าข่าวการเมือง</p>
+                    <p class="text-gray-600 text-sm">ผู้ควบคุมการนำเสนอข่าวการเมืองและนโยบายสาธารณะ</p>
+                    <div class="flex justify-center space-x-3 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-500">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded-xl p-6 text-center team-card transition-all duration-300 shadow-sm hover:shadow-md border border-gray-100">
+                    <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-md">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="ทีมงาน" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">พรพิมล ตั้งเจริญ</h3>
+                    <p class="text-blue-600 font-medium mb-3">หัวหน้าข่าวเศรษฐกิจ</p>
+                    <p class="text-gray-600 text-sm">ผู้วิเคราะห์และนำเสนอข่าวเศรษฐกิจการเงิน</p>
+                    <div class="flex justify-center space-x-3 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-500">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Team Member 4 -->
+                <div class="bg-white rounded-xl p-6 text-center team-card transition-all duration-300 shadow-sm hover:shadow-md border border-gray-100">
+                    <div class="w-32 h-32 rounded-full mx-auto mb-4 overflow-hidden border-4 border-white shadow-md">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="ทีมงาน" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="font-bold text-xl mb-1">อรรถพล ดิษฐบรรจง</h3>
+                    <p class="text-blue-600 font-medium mb-3">หัวหน้าฝ่ายเทคโนโลยี</p>
+                    <p class="text-gray-600 text-sm">ผู้ออกแบบและพัฒนาระบบเทคโนโลยีของเว็บไซต์</p>
+                    <div class="flex justify-center space-x-3 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-blue-500">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-blue-500">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto px-5">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold mb-2">5+</div>
+                    <div class="text-blue-100">ปีแห่งความไว้วางใจ</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">1M+</div>
+                    <div class="text-blue-100">ผู้อ่านต่อเดือน</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">50+</div>
+                    <div class="text-blue-100">นักข่าวมืออาชีพ</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold mb-2">24/7</div>
+                    <div class="text-blue-100">อัพเดทข่าวสาร</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-5">
+            <div class="bg-white rounded-xl shadow-lg p-8 md:p-12 max-w-4xl mx-auto text-center border border-gray-100">
+                <h2 class="text-3xl font-bold mb-4">ร่วมเป็นส่วนหนึ่งของเรา</h2>
+                <p class="text-gray-600 mb-8 max-w-2xl mx-auto">ไม่ว่าคุณจะเป็นนักข่าว นักเขียน หรือผู้มีความสามารถด้านใด เรายินดีต้อนรับผู้มีความสามารถมาร่วมงานกับเรา</p>
+                <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-full inline-flex items-center transition-colors">
+                    ติดต่อเรา <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 pt-16 pb-8">
+        <div class="container mx-auto px-5">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-blue-500 flex items-center justify-center">
+                            <i class="fas fa-newspaper text-white text-xl"></i>
+                        </div>
+                        <span class="text-xl font-bold gradient-text">ModernNews</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">แหล่งข่าวสารที่ทันสมัย น่าเชื่อถือ และนำเสนอในรูปแบบที่สวยงาม</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-500 hover:text-blue-600">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-blue-600">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-blue-600">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-blue-600">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">ลิงก์ด่วน</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-600 hover:text-blue-600">หน้าหลัก</a></li>
+                        <li><a href="news.html" class="text-gray-600 hover:text-blue-600">ข่าวเด่น</a></li>
+                        <li><a href="categories.html" class="text-gray-600 hover:text-blue-600">หมวดหมู่</a></li>
+                        <li><a href="about.html" class="text-blue-600">เกี่ยวกับ</a></li>
+                        <li><a href="contact.html" class="text-gray-600 hover:text-blue-600">ติดต่อ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">หมวดหมู่</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">การเมือง</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">เศรษฐกิจ</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">เทคโนโลยี</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">กีฬา</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-blue-600">บันเทิง</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">ติดต่อเรา</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">123 ถนนข่าวสาร แขวงเว็บไซต์ เขตอินเทอร์เน็ต กรุงเทพมหานคร 10110</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-blue-600 mr-3"></i>
+                            <span class="text-gray-600">02-123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-blue-600 mr-3"></i>
+                            <span class="text-gray-600">contact@modernnews.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2023 ModernNews. สงวนลิขสิทธิ์ทุกประการ</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-blue-600 text-sm">นโยบายความเป็นส่วนตัว</a>
+                        <a href="#" class="text-gray-500 hover:text-blue-600 text-sm">ข้อกำหนดการใช้งาน</a>
+                        <a href="#" class="text-gray-500 hover:text-blue-600 text-sm">นโยบายคุกกี้</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
