@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern News | เว็บข่าวสารสมัยใหม่</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .news-card {
+            transition: all 0.3s ease;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: linear-gradient(45deg, #0ea5e9, #3b82f6);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800 antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-100 py-4 sticky top-0 z-50">
+        <div class="container mx-auto px-5">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center">
+                        <i class="fas fa-newspaper text-white text-xl"></i>
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">ModernNews</span>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="font-medium text-gray-700 hover:text-primary-600 transition-colors">หน้าหลัก</a>
+                    <a href="#" class="font-medium text-gray-700 hover:text-primary-600 transition-colors">ข่าวเด่น</a>
+                    <a href="#" class="font-medium text-gray-700 hover:text-primary-600 transition-colors">หมวดหมู่</a>
+                    <a href="#" class="font-medium text-gray-700 hover:text-primary-600 transition-colors">เกี่ยวกับ</a>
+                    <a href="#" class="font-medium text-gray-700 hover:text-primary-600 transition-colors">ติดต่อ</a>
+                </div>
+                
+                <div class="flex items-center space-x-4">
+                    <button class="p-2 rounded-full hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-search text-gray-600"></i>
+                    </button>
+                    <button class="md:hidden p-2 rounded-full hover:bg-gray-100 transition-colors">
+                        <i class="fas fa-bars text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-12 bg-gradient-to-r from-primary-50 to-blue-50">
+        <div class="container mx-auto px-5">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">ติดตามข่าวสารล่าสุด <span class="gradient-text">ทุกเรื่องที่คุณสนใจ</span></h1>
+                <p class="text-lg text-gray-600 mb-8">แหล่งรวมข่าวสารที่ทันสมัย น่าเชื่อถือ และอัพเดททุกวัน ด้วยการนำเสนอที่สวยงามและอ่านง่าย</p>
+                
+                <div class="max-w-2xl mx-auto relative">
+                    <input type="text" placeholder="ค้นหาข่าวสาร..." 
+                        class="w-full py-3 px-5 rounded-full border border-gray-200 focus:outline-none focus:ring-2 focus:ring-primary-300 focus:border-transparent shadow-sm">
+                    <button class="absolute right-3 top-3 text-primary-500 hover:text-primary-600">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured News -->
+    <section class="py-16">
+        <div class="container mx-auto px-5">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-bold">ข่าวเด่นประจำวัน</h2>
+                <a href="#" class="text-primary-600 hover:text-primary-800 font-medium flex items-center">
+                    ดูทั้งหมด <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Featured News 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden news-card border border-gray-100">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" 
+                             alt="Featured News" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">ด่วน</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded mr-3 text-xs font-medium">การเมือง</span>
+                            <span><i class="far fa-clock mr-1"></i> 2 ชั่วโมงที่แล้ว</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 leading-snug">รัฐบาลประกาศมาตรการเศรษฐกิจใหม่ เร่งฟื้นฟูหลังวิกฤต</h3>
+                        <p class="text-gray-600 mb-4">คณะรัฐมนตรีมีมติเห็นชอบมาตรการกระตุ้นเศรษฐกิจระยะเร่งด่วน มูลค่ากว่า 1 แสนล้านบาท มุ่งช่วยเหลือผู้ประกอบการเอสเอ็มอีและแรงงาน...</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-primary-600 hover:text-primary-800 font-medium flex items-center">
+                                อ่านต่อ <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                            <div class="flex space-x-2">
+                                <button class="text-gray-400 hover:text-primary-500">
+                                    <i class="far fa-bookmark"></i>
+                                </button>
+                                <button class="text-gray-400 hover:text-primary-500">
+                                    <i class="far fa-share-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Featured News 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden news-card border border-gray-100">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Featured News" class="w-full h-64 object-cover">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-primary-500 text-white text-xs font-semibold px-3 py-1 rounded-full">ใหม่</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded mr-3 text-xs font-medium">เทคโนโลยี</span>
+                            <span><i class="far fa-clock mr-1"></i> 5 ชั่วโมงที่แล้ว</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3 leading-snug">เปิดตัว AI รุ่นใหม่สามารถสนทนาเหมือนมนุษย์ได้อย่างน่าทึ่ง</h3>
+                        <p class="text-gray-600 mb-4">บริษัทเทคโนโลยีชั้นนำเปิดตัวระบบปัญญาประดิษฐ์รุ่นล่าสุดที่สามารถเข้าใจบริบทการสนทนาได้ลึกซึ้งกว่าเดิม พร้อมตอบคำถามที่ซับซ้อน...</p>
+                        <div class="flex justify-between items-center">
+                            <a href="#" class="text-primary-600 hover:text-primary-800 font-medium flex items-center">
+                                อ่านต่อ <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                            </a>
+                            <div class="flex space-x-2">
+                                <button class="text-gray-400 hover:text-primary-500">
+                                    <i class="far fa-bookmark"></i>
+                                </button>
+                                <button class="text-gray-400 hover:text-primary-500">
+                                    <i class="far fa-share-square"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-5">
+            <div class="flex justify-between items-center mb-10">
+                <h2 class="text-3xl font-bold">ข่าวล่าสุด</h2>
+                <a href="#" class="text-primary-600 hover:text-primary-800 font-medium flex items-center">
+                    ดูทั้งหมด <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- News 1 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden news-card border border-gray-100 hover:shadow-md">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" 
+                         alt="News" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2 py-1 rounded">ธุรกิจ</span>
+                            <span class="text-xs text-gray-500"><i class="far fa-clock mr-1"></i> 1 ชม.</span>
+                        </div>
+                        <h3 class="font-bold mb-2 leading-snug">ตลาดหุ้นไทยปิดบวกรับแรงซื้อจากนักลงทุนต่างชาติ</h3>
+                        <p class="text-gray-600 text-sm mb-4">ดัชนี SET ปิดที่ 1,650.25 จุด เพิ่มขึ้น 12.45 จุด หรือ 0.76% มูลค่าการซื้อขาย 85,000 ล้านบาท...</p>
+                        <a href="#" class="text-primary-600 hover:text-primary-800 text-sm font-medium flex items-center">
+                            อ่านต่อ <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- News 2 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden news-card border border-gray-100 hover:shadow-md">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="News" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2 py-1 rounded">วิทยาศาสตร์</span>
+                            <span class="text-xs text-gray-500"><i class="far fa-clock mr-1"></i> 3 ชม.</span>
+                        </div>
+                        <h3 class="font-bold mb-2 leading-snug">นักวิทย์ค้นพบดาวเคราะห์ใหม่ที่มีสภาพคล้ายโลก</h3>
+                        <p class="text-gray-600 text-sm mb-4">ทีมนักดาราศาสตร์นานาชาติประกาศการค้นพบดาวเคราะห์นอกระบบสุริยะที่มีลักษณะคล้ายโลกและอยู่ในเขตอาศัยได้...</p>
+                        <a href="#" class="text-primary-600 hover:text-primary-800 text-sm font-medium flex items-center">
+                            อ่านต่อ <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- News 3 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden news-card border border-gray-100 hover:shadow-md">
+                    <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="News" class="w-full h-48 object-cover">
+                    <div class="p-5">
+                        <div class="flex justify-between items-center mb-3">
+                            <span class="bg-red-100 text-red-800 text-xs font-medium px-2 py-1 rounded">กีฬา</span>
+                            <span class="text-xs text-gray-500"><i class="far fa-clock mr-1"></i> 5 ชม.</span>
+                        </div>
+                        <h3 class="font-bold mb-2 leading-snug">นักเตะไทยคว้าแชมป์รายการสำคัญในต่างประเทศ</h3>
+                        <p class="text-gray-600 text-sm mb-4">นักฟุตบอลทีมชาติไทยสร้างประวัติศาสตร์ด้วยการคว้าแชมป์รายการระดับนานาชาติเป็นครั้งแรก...</p>
+                        <a href="#" class="text-primary-600 hover:text-primary-800 text-sm font-medium flex items-center">
+                            อ่านต่อ <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="bg-white border border-primary-500 text-primary-600 hover:bg-primary-50 font-medium py-2.5 px-8 rounded-full transition-colors inline-flex items-center">
+                    โหลดเพิ่มเติม <i class="fas fa-plus ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="py-16">
+        <div class="container mx-auto px-5">
+            <h2 class="text-3xl font-bold mb-10 text-center">หมวดหมู่ข่าว</h2>
+            
+            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+                <a href="#" class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-landmark text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold mb-1">การเมือง</h3>
+                    <p class="text-sm text-gray-500">25 ข่าวใหม่</p>
+                </a>
+                
+                <a href="#" class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-chart-line text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold mb-1">เศรษฐกิจ</h3>
+                    <p class="text-sm text-gray-500">18 ข่าวใหม่</p>
+                </a>
+                
+                <a href="#" class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-microchip text-purple-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold mb-1">เทคโนโลยี</h3>
+                    <p class="text-sm text-gray-500">32 ข่าวใหม่</p>
+                </a>
+                
+                <a href="#" class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-running text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold mb-1">กีฬา</h3>
+                    <p class="text-sm text-gray-500">15 ข่าวใหม่</p>
+                </a>
+                
+                <a href="#" class="bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heartbeat text-yellow-600 text-2xl"></i>
+                    </div>
+                    <h3 class="font-bold mb-1">สุขภาพ</h3>
+                    <p class="text-sm text-gray-500">12 ข่าวใหม่</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-primary-600 text-white">
+        <div class="container mx-auto px-5">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">สมัครรับจดหมายข่าว</h2>
+                <p class="text-primary-100 mb-8 max-w-2xl mx-auto">รับข่าวสารล่าสุดทางอีเมลของคุณ เราไม่ส่งสแปมและคุณสามารถยกเลิกได้ตลอดเวลา</p>
+                
+                <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto sm:max-w-xl">
+                    <input type="email" placeholder="อีเมลของคุณ" 
+                        class="flex-grow py-3 px-5 rounded-full focus:outline-none focus:ring-2 focus:ring-primary-300 text-gray-800">
+                    <button class="bg-white text-primary-600 font-medium py-3 px-6 rounded-full hover:bg-gray-100 transition-colors">
+                        สมัครตอนนี้
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 pt-16 pb-8">
+        <div class="container mx-auto px-5">
+            <div class="grid md:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center">
+                            <i class="fas fa-newspaper text-white text-xl"></i>
+                        </div>
+                        <span class="text-xl font-bold gradient-text">ModernNews</span>
+                    </div>
+                    <p class="text-gray-600 mb-4">แหล่งข่าวสารที่ทันสมัย น่าเชื่อถือ และนำเสนอในรูปแบบที่สวยงาม</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-500 hover:text-primary-600">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-primary-600">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-primary-600">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-primary-600">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">ลิงก์ด่วน</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600">หน้าหลัก</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600">เกี่ยวกับเรา</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600">ทีมงาน</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600">นโยบายความเป็นส่วนตัว</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600">ข้อกำหนดการใช้งาน</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">หมวดหมู่</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600">การเมือง</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600">เศรษฐกิจ</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600">เทคโนโลยี</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600">กีฬา</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-primary-600">บันเทิง</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="font-bold text-lg mb-4">ติดต่อเรา</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-primary-600 mt-1 mr-3"></i>
+                            <span class="text-gray-600">123 ถนนข่าวสาร แขวงเว็บไซต์ เขตอินเทอร์เน็ต กรุงเทพมหานคร 10110</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-primary-600 mr-3"></i>
+                            <span class="text-gray-600">02-123-4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-primary-600 mr-3"></i>
+                            <span class="text-gray-600">contact@modernnews.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-200 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2023 ModernNews. สงวนลิขสิทธิ์ทุกประการ</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-primary-600 text-sm">นโยบายความเป็นส่วนตัว</a>
+                        <a href="#" class="text-gray-500 hover:text-primary-600 text-sm">ข้อกำหนดการใช้งาน</a>
+                        <a href="#" class="text-gray-500 hover:text-primary-600 text-sm">นโยบายคุกกี้</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
